@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class LookAtOutline : MonoBehaviour
 {
     [SerializeField] private Image cursor;
-    public float maxDistance = 10f; // Максимальная дистанция, на которой происходит проверка
+    public float maxDistance = 1f; // Максимальная дистанция, на которой происходит проверка
     private Outline lastOutline; // Последний объект с компонентом Outline
 
     void Update()

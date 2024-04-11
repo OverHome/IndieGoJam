@@ -7,6 +7,7 @@ public class TakeObject : MonoBehaviour
 {
     [SerializeField] private Transform objPos;
     [SerializeField] private PlayerController playerController;
+    public float maxDistance = 1f;
 
     private Rigidbody takedObj;
     private bool _isTaked;
@@ -21,7 +22,7 @@ public class TakeObject : MonoBehaviour
             
                 RaycastHit hitInfo;
 
-                if (!Physics.Raycast(ray, out hitInfo)) return;
+                if (!Physics.Raycast(ray, out hitInfo, maxDistance)) return;
                 if (!hitInfo.transform.gameObject.CompareTag("Takeable")) return;
                 hitInfo.rigidbody.isKinematic = true;
                 hitInfo.collider.enabled = false;
@@ -36,7 +37,7 @@ public class TakeObject : MonoBehaviour
                 takedObj.transform.parent = null;
                 takedObj.isKinematic = false;
                 takedObj.GetComponent<Collider>().enabled = true;
-                takedObj.AddForce(Camera.main.transform.forward*10 + playerController.GetForse());
+                takedObj.AddForce((Camera.main.transform.forward + playerController.GetForse())*4, ForceMode.Force);
                 print( playerController.GetForse());
                 takedObj = null;
             }
