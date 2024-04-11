@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = Cursor.lockState == CursorLockMode.Locked? CursorLockMode.Confined: CursorLockMode.Locked;
             canMovedCamera = CursorLockMode.Locked == Cursor.lockState;
         }
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
+
+        _yRotation += mouseX;
+        _xRotation -= mouseY;
+        _xRotation = Mathf.Clamp(_xRotation, -90, 90);
     }
 
     private void FixedUpdate()
@@ -60,10 +66,6 @@ public class PlayerController : MonoBehaviour
     {
         if (canMovedCamera && _playerCamera != null)
         {
-            float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
-            _xRotation -= mouseY;
-            _yRotation += mouseX;
             // _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
             transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
