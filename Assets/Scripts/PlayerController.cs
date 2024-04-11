@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -35,12 +37,16 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = Cursor.lockState == CursorLockMode.Locked? CursorLockMode.Confined: CursorLockMode.Locked;
             canMovedCamera = CursorLockMode.Locked == Cursor.lockState;
         }
+        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Shake();
+        }
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
 
         _yRotation += mouseX;
         _xRotation -= mouseY;
-        _xRotation = Mathf.Clamp(_xRotation, -90, 90);
     }
 
     private void FixedUpdate()
@@ -66,11 +72,25 @@ public class PlayerController : MonoBehaviour
     {
         if (canMovedCamera && _playerCamera != null)
         {
-            // _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
-
             transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
-            //transform.Rotate(Vector3.up*mouseX);
-            // transform.localRotation = Quaternion.Euler(0, _yRotation, 0);
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Takeable"))
+        {
+            Shake();
+        }
+    }
+
+    private void Shake()
+    {
+        _playerCamera.transform.DOShakeRotation(0.2f, 2.5f, randomnessMode: ShakeRandomnessMode.Harmonic);
+    }
+
+    public Vector3 GetForse()
+    {
+        return _rb.velocity;
     }
 }

@@ -24,7 +24,7 @@ public class LookAtOutline : MonoBehaviour
                        
                     }
                     outline.enabled = true;
-                    cursor.enabled = true;
+                    // cursor.enabled = true;
                     lastOutline = outline;
                 }
             }
@@ -33,7 +33,7 @@ public class LookAtOutline : MonoBehaviour
                 if (lastOutline != null)
                 {
                     lastOutline.enabled = false;
-                    cursor.enabled = false;
+                    // cursor.enabled = false;
                     lastOutline = null;
                 }
             }
@@ -45,7 +45,7 @@ public class LookAtOutline : MonoBehaviour
             if (lastOutline != null)
             {
                 lastOutline.enabled = false; 
-                cursor.enabled = false;
+                // cursor.enabled = false;
                 lastOutline = null;
             }
         }

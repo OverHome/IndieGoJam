@@ -6,6 +6,7 @@ using UnityEngine;
 public class TakeObject : MonoBehaviour
 {
     [SerializeField] private Transform objPos;
+    [SerializeField] private PlayerController playerController;
 
     private Rigidbody takedObj;
     private bool _isTaked;
@@ -35,7 +36,8 @@ public class TakeObject : MonoBehaviour
                 takedObj.transform.parent = null;
                 takedObj.isKinematic = false;
                 takedObj.GetComponent<Collider>().enabled = true;
-                takedObj.AddForce(Camera.main.transform.forward*10);
+                takedObj.AddForce(Camera.main.transform.forward*10 + playerController.GetForse());
+                print( playerController.GetForse());
                 takedObj = null;
             }
            
