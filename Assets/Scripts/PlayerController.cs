@@ -9,12 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runningSpeed = 10;
     [SerializeField] private float sensitivity = 100;
     [SerializeField] private Transform cameraPosition;
-    [SerializeField] private float jumpForce = 4;
-    [SerializeField] private float gravity = 10;
     
     private float _xRotation = 0f;
+    private float _yRotation = 0f;
     private Vector3 _moveDirection = Vector3.zero;
-    private CharacterController _characterController;
+    private Rigidbody _rb;
     private Camera _playerCamera;
 
     [HideInInspector] public bool canMove = true;
@@ -25,7 +24,7 @@ public class PlayerController : MonoBehaviour
         _playerCamera = Camera.main;
         _playerCamera.transform.position = cameraPosition.position;
         _playerCamera.transform.SetParent(transform);
-        _characterController = GetComponent<CharacterController>();
+        _rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -47,33 +46,14 @@ public class PlayerController : MonoBehaviour
     // ReSharper disable Unity.PerformanceAnalysis
     private void CharacterMove()
     {
-        bool isRunning;
+        Vector3 forward = _playerCamera.transform.TransformDirection(Vector3.forward);
+        Vector3 right = _playerCamera.transform.TransformDirection(Vector3.right);
 
-        isRunning = Input.GetKey(KeyCode.LeftShift);
-
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
-
-        float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * Input.GetAxis("Horizontal") : 0;
-        float movementDirectionY = _moveDirection.y;
+        float curSpeedX = canMove ? walkingSpeed * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? walkingSpeed * Input.GetAxis("Horizontal") : 0;
         _moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
-        if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
-        {
-            _moveDirection.y = jumpForce;
-        }
-        else
-        {
-            _moveDirection.y = movementDirectionY;
-        }
-
-        if (!_characterController.isGrounded)
-        {
-            _moveDirection.y -= gravity * Time.fixedDeltaTime;
-        }
         
-        _characterController.Move(_moveDirection * Time.deltaTime);
+        _rb.AddForce(_moveDirection*walkingSpeed*Time.fixedDeltaTime, ForceMode.Force);
     }
 
     private void CameraMove()
@@ -83,11 +63,12 @@ public class PlayerController : MonoBehaviour
             float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
             _xRotation -= mouseY;
-            _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+            _yRotation += mouseX;
+            // _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
-            _playerCamera.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
+            transform.localRotation = Quaternion.Euler(_xRotation, _yRotation, 0f);
             //transform.Rotate(Vector3.up*mouseX);
-            transform.rotation *= Quaternion.Euler(0, mouseX, 0);
+            // transform.localRotation = Quaternion.Euler(0, _yRotation, 0);
         }
     }
 }
