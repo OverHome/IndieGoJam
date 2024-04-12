@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,11 +25,22 @@ public class DialogSystem : MonoBehaviour
             {
                 subText.enabled = true;
                 audioSource.enabled = true;
-                subText.text = dialoge.Data.Data[0].Sub;
-                audioSource.clip = dialoge.Data.Data[0].Audio;
-                audioSource.Play();
+                StartCoroutine(PlayAnudio(dialoge.Data));
                 break;
             }
         }
+    }
+
+    private IEnumerator PlayAnudio(DialogeData data)
+    {
+        foreach (var says in data.Data)
+        {
+            subText.text = says.Sub;
+            audioSource.clip = says.Audio;
+            audioSource.Play();
+            yield return new WaitForSeconds(audioSource.clip.length);
+        }
+        subText.enabled = false;
+        audioSource.enabled = false;
     }
 }

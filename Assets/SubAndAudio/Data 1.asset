@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da1b5948e5614f328c5c68889c0cda53, type: 3}
-  m_Name: Data
+  m_Name: Data 1
   m_EditorClassIdentifier: 
   Data:
-  - Sub: "\u041F\u0443 \u043F\u0443 \u043F\u0443!"
-    Audio: {fileID: 8300000, guid: f970ce317abde4a02b66d49b3b9bc084, type: 3}
-  - Sub: "\u041D\u0443\u0436\u0435\u043D \u043A\u0443\u0431\u0438\u043A"
-    Audio: {fileID: 8300000, guid: 17f6e965423175dca86a55bb9476952c, type: 3}
+  - Sub: "\u041E\u041E\u041E \u0445\u043E\u0440\u043E\u0448\u043E!"
+    Audio: {fileID: 8300000, guid: b556b0b02a437f22c9830b7fa43ffe60, type: 3}

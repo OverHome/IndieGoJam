@@ -247,9 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawImage: {fileID: 173711132}
   videoPlayer: {fileID: 173711131}
-  cutscenes:
-  - Quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
-    Video: {fileID: 32900000, guid: ff7593547f091ff7bb5fc186cb8e84bd, type: 3}
+  cutscenes: []
 --- !u!1 &245368360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,8 +1429,10 @@ MonoBehaviour:
   subText: {fileID: 862476758}
   audioSource: {fileID: 1130381275}
   dialoges:
-  - Quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
+  - Quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
     Data: {fileID: 11400000, guid: a2fcbed1fc4e20cebb304424234ca8d6, type: 2}
+  - Quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
+    Data: {fileID: 11400000, guid: 88f536ac15b7994e69516af57fd376ad, type: 2}
 --- !u!82 &1130381275
 AudioSource:
   m_ObjectHideFlags: 0
