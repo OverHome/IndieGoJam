@@ -29,6 +29,7 @@ public class TakeObject : MonoBehaviour
                 hitInfo.transform.parent = objPos;
                 hitInfo.transform.position = objPos.position;
                 takedObj = hitInfo.transform.GetComponent<Rigidbody>();
+                hitInfo.transform.GetComponent<TakeTriger>()?.Trigger();
                 _isTaked = true;
             }
             else
