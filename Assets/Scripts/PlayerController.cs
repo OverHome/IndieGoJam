@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
         _yRotation += mouseX;
         _xRotation -= mouseY;
+        _xRotation = Mathf.Clamp(_xRotation, -90, 90);
     }
 
     private void FixedUpdate()

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c851088e949a4360a6c9bc25acc4f741, type: 3}
-  m_Name: 1
+  m_Name: -1
   m_EditorClassIdentifier: 
-  Id: 0
-  Name: Take
-  Descruption: You need to take obj
+  Id: -1
+  Name: Done
+  Descruption: 
