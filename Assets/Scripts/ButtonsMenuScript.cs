@@ -32,4 +32,9 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         buttonText.font = fontOld;
         buttonImage.color = new Color(0f,0f,0f,0f);
     }
+    void OnDisable(){
+        buttonText.color = hoverColor;
+        buttonText.font = fontOld;
+        buttonImage.color = new Color(0f,0f,0f,0f);
+    }
 }
