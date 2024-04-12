@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour{
         if(Input.GetKeyDown(KeyCode.Escape)){
             TogglePauseMenu();
         }
+        print(Time.timeScale);
     }
     public void TogglePauseMenu(){
         pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
@@ -17,7 +18,9 @@ public class PauseMenu : MonoBehaviour{
         }
         else{
             Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+    public void setTimeGo(){
+        Time.timeScale = 1;
     }
 }
