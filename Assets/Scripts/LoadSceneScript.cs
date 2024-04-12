@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Switch : MonoBehaviour{
+public class MainMenuManager : MonoBehaviour{
     public void scenLoad(int scenNum){
         SceneManager.LoadScene(scenNum);
+    }
+    public void Exit(){
+        Application.Quit();
     }
 }
