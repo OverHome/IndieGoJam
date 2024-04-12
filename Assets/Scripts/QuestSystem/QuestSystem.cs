@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuestSystem: MonoBehaviour
 {
     public static QuestSystem Instance;
-
+    public UnityEvent<int> OnChangeQuest;
+    
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private List<Quest> quests;
@@ -22,9 +24,11 @@ public class QuestSystem: MonoBehaviour
             print("QuestSystem already exist!!");
             Destroy(gameObject);
         }
+    }
 
+    private void Start()
+    {
         SetQuest(0);
-        
     }
 
     private void SetQuest(int id)
@@ -32,6 +36,7 @@ public class QuestSystem: MonoBehaviour
         nameText.text = quests[id].Name;
         descriptionText.text = quests[id].Descruption;
         _questId = id;
+        OnChangeQuest.Invoke(quests[id].Id);
     }
 
     public void NextQuest()

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 173711133}
   - component: {fileID: 173711132}
   - component: {fileID: 173711131}
+  - component: {fileID: 173711134}
   m_Layer: 5
   m_Name: VideoPlayer
   m_TagString: Untagged
@@ -232,6 +233,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173711129}
   m_CullTransparentMesh: 1
+--- !u!114 &173711134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173711129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc194042e3444c39a10ece7f5d840d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rawImage: {fileID: 173711132}
+  videoPlayer: {fileID: 173711131}
+  cutscenes:
+  - Quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
+    Video: {fileID: 32900000, guid: ff7593547f091ff7bb5fc186cb8e84bd, type: 3}
 --- !u!1 &245368360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,8 +1340,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2135353149}
-  - {fileID: 173711130}
   - {fileID: 451966038}
+  - {fileID: 173711130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1343,6 +1361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7d291b402649e1ac553c59e9782b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnChangeQuest:
+    m_PersistentCalls:
+      m_Calls: []
   nameText: {fileID: 245368362}
   descriptionText: {fileID: 1832997203}
   quests:
