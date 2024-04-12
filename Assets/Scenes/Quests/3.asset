@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c851088e949a4360a6c9bc25acc4f741, type: 3}
   m_Name: 3
   m_EditorClassIdentifier: 
-  Id: -1
-  Name: Done
-  Descruption: 
+  Id: 2
+  Name: Press
+  Descruption: You need to press f
