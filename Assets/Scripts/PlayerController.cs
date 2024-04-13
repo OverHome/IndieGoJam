@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveDirection = Vector3.zero;
     private Rigidbody _rb;
     private Camera _playerCamera;
+    private InteractWithGame _interactWithGame;
 
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool canMovedCamera = true;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         _playerCamera.transform.position = cameraPosition.position;
         _playerCamera.transform.SetParent(transform);
         _rb = GetComponent<Rigidbody>();
+        _interactWithGame = GetComponent<InteractWithGame>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -37,11 +39,12 @@ public class PlayerController : MonoBehaviour
             Cursor.lockState = Cursor.lockState == CursorLockMode.Locked? CursorLockMode.Confined: CursorLockMode.Locked;
             canMovedCamera = CursorLockMode.Locked == Cursor.lockState;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Shake();
+            _interactWithGame.TryPlayGame();
         }
+        
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
 
@@ -93,5 +96,12 @@ public class PlayerController : MonoBehaviour
     public Vector3 GetForse()
     {
         return _rb.velocity;
+    }
+
+    public void SetMove(bool isCan)
+    {
+        canMovedCamera = isCan;
+        canMove = isCan;
+        _rb.velocity = Vector3.zero;
     }
 }
