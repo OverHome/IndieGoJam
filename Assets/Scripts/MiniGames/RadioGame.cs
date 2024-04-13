@@ -34,7 +34,7 @@ public class RadioGame: MiniGame
             if (_tempRotate >= needRotate)
             {
                 StopGame();
-                QuestSystem.Instance.NextQuest();
+                QuestSystem.Instance.NextQuest();       
             }
         }
     }
