@@ -102,6 +102,6 @@ public class PlayerController : MonoBehaviour
     {
         canMovedCamera = isCan;
         canMove = isCan;
-        _rb.velocity = Vector3.zero;
+        // _rb.velocity = Vector3.zero;
     }
 }

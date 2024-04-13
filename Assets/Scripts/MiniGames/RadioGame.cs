@@ -5,6 +5,7 @@ using UnityEngine;
 public class RadioGame: MiniGame
 {
     [SerializeField] private GameObject knob;
+    [SerializeField] private GameObject arrow;
     [SerializeField] private float rotationSpeed = 15f;
     [SerializeField] private float needRotate = 100;
 
@@ -19,11 +20,13 @@ public class RadioGame: MiniGame
 
             if (a)
             {
-                knob.transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+                knob.transform.Rotate(rotationSpeed * Time.deltaTime, 0, 0);
+                arrow.transform.Rotate(rotationSpeed/3 * Time.deltaTime, 0, 0);
             }
             else if (d)
             {
-                knob.transform.Rotate(0, 0, -rotationSpeed * Time.deltaTime);
+                knob.transform.Rotate(-rotationSpeed * Time.deltaTime, 0, 0);
+                arrow.transform.Rotate(-rotationSpeed/3 * Time.deltaTime, 0, 0);
             }
 
             _tempRotate += rotationSpeed * Time.deltaTime;
