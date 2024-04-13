@@ -10,7 +10,7 @@ public class DoreOpen : MiniGame
     private float _tempRotate;
     private void Update()
     {
-        if (_isGameStart && QuestSystem.Instance.GetQuestId() == quest.Id)
+        if (_isGameStart)
         {
             var w = Input.GetKey(KeyCode.W);
             var space = Input.GetKeyDown(KeyCode.Space);

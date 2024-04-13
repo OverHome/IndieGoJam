@@ -13,7 +13,7 @@ public class RadioGame: MiniGame
     private float _tempRotate;
     private void Update()
     {
-        if (_isGameStart && QuestSystem.Instance.GetQuestId() == quest.Id)
+        if (_isGameStart)
         {
             var a = Input.GetKey(KeyCode.A);
             var d = Input.GetKey(KeyCode.D);
