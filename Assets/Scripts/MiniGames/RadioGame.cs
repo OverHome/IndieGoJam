@@ -6,13 +6,14 @@ public class RadioGame: MiniGame
 {
     [SerializeField] private GameObject knob;
     [SerializeField] private GameObject arrow;
+    [SerializeField] private Quest quest;
     [SerializeField] private float rotationSpeed = 15f;
     [SerializeField] private float needRotate = 100;
 
     private float _tempRotate;
     private void Update()
     {
-        if (_isGameStart)
+        if (_isGameStart && QuestSystem.Instance.GetQuestId() == quest.Id)
         {
             var a = Input.GetKey(KeyCode.A);
             var d = Input.GetKey(KeyCode.D);
@@ -33,6 +34,7 @@ public class RadioGame: MiniGame
             if (_tempRotate >= needRotate)
             {
                 StopGame();
+                QuestSystem.Instance.NextQuest();
             }
         }
     }
