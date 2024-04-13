@@ -24,6 +24,7 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         buttonText.color = new Color(0.6f,0.176f,0.050f,1f);
         buttonText.font = fontNew;
         buttonImage.color = hoverColor;
+        SoundManager.Instantiate.PlaySound(0);
     }
 
     public void OnPointerExit(PointerEventData eventData)
