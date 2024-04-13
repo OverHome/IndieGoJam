@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028443, g: 0.22571549, b: 0.30692443, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028434, g: 0.22571537, b: 0.30692434, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   knob: {fileID: 1527738437}
   arrow: {fileID: 1011791809}
-  quest: {fileID: 0}
+  quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
   rotationSpeed: 15
   needRotate: 100
 --- !u!1 &282792256
@@ -5209,8 +5209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   dore: {fileID: 1831600036}
-  quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
-  rotationSpeed: 200
+  quest: {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
+  rotationSpeed: 100
   needRotate: 90
 --- !u!1001 &1051647542
 PrefabInstance:
@@ -5520,6 +5520,10 @@ MonoBehaviour:
     Data: {fileID: 11400000, guid: 072b211d5475eb547b60cefa1a8d34ba, type: 2}
   - Quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
     Data: {fileID: 11400000, guid: 2911ae8da17e01345b0947bb6e57ec14, type: 2}
+  - Quest: {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
+    Data: {fileID: 11400000, guid: 1a9241655a8f5fa449e0983aa463ed20, type: 2}
+  - Quest: {fileID: 11400000, guid: 170bbaf0161798a48bea9b3a10c1057d, type: 2}
+    Data: {fileID: 11400000, guid: d9fad7ff7403f0c488c381ae7d37ea78, type: 2}
 --- !u!82 &1130381275
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5744,6 +5748,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
   - {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
   - {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
+  - {fileID: 11400000, guid: 170bbaf0161798a48bea9b3a10c1057d, type: 2}
   - {fileID: 11400000, guid: 1d30b413fce20504ba1d4ee705789512, type: 2}
 --- !u!1 &1165260524
 GameObject:
