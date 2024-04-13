@@ -2,16 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class SettingsScript : MonoBehaviour
 {
+    // Unity Settings Lists
     private Resolution[] _resolution;
+    public UniversalRenderPipelineAsset[] pipleLineRender;
+    public UnityEngine.ShadowResolution[] shadowResolutionsArray = {UnityEngine.ShadowResolution.Low,UnityEngine.ShadowResolution.Medium,UnityEngine.ShadowResolution.VeryHigh};
+    // TEXT
     private String[] _qualityPreset = {"Низкие","Средние","По ГОСТу"};
     private String[] _FSRquality = {"Выкл","Качество","Баланс","Производительность"};
+
+    // VARIABLES
+    private int _currentQuality;
     public TextMeshProUGUI resText;
     public TextMeshProUGUI qualityText;
     public TextMeshProUGUI FSRText;
@@ -20,6 +30,7 @@ public class SettingsScript : MonoBehaviour
         _resolution = Screen.resolutions;
         resText.text = Screen.currentResolution.width.ToString() + "X" + Screen.currentResolution.height.ToString();
         qualityText.text = _qualityPreset[2];
+        _currentQuality = 2;
         FSRText.text = _FSRquality[0];
         volumeSlider.value = AudioListener.volume;
     }
@@ -38,6 +49,15 @@ public class SettingsScript : MonoBehaviour
                     }
                 }
             break;
+            case 1:
+                if(_currentQuality != 0){
+                    _currentQuality -= 1;
+                    QualitySettings.SetQualityLevel(_currentQuality,true);
+                    print(GraphicsSettings.renderPipelineAsset);
+                    print(QualitySettings.shadowResolution);
+                    qualityText.text = _qualityPreset[_currentQuality];
+                }
+                break;
         }
     }
     public void ChangeValueRight(int type){
@@ -52,6 +72,15 @@ public class SettingsScript : MonoBehaviour
                     }
                 }
             break;
+            case 1:
+                if(_currentQuality != pipleLineRender.Length - 1){
+                    _currentQuality += 1;
+                    QualitySettings.SetQualityLevel(_currentQuality,true);
+                    print(GraphicsSettings.renderPipelineAsset);
+                    print(QualitySettings.shadowResolution);
+                    qualityText.text = _qualityPreset[_currentQuality];
+                }
+                break;
         }
     }
     bool Is16By9(int width, int height)
@@ -59,4 +88,5 @@ public class SettingsScript : MonoBehaviour
         float aspectRatio = (float)width / height;
         return Mathf.Approximately(aspectRatio, 16f / 9f);
     }
+    
 }
