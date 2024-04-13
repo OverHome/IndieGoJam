@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf31da3473e243b38cd959ed18f37750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
+  quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
   needItemUI: 0
 --- !u!135 &177689635
 SphereCollider:
@@ -5393,9 +5393,9 @@ MonoBehaviour:
   audioSource: {fileID: 1130381275}
   dialoges:
   - Quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
-    Data: {fileID: 11400000, guid: a2fcbed1fc4e20cebb304424234ca8d6, type: 2}
+    Data: {fileID: 11400000, guid: 072b211d5475eb547b60cefa1a8d34ba, type: 2}
   - Quest: {fileID: 11400000, guid: 5687358cff6b3794fb5998693eb80588, type: 2}
-    Data: {fileID: 11400000, guid: 88f536ac15b7994e69516af57fd376ad, type: 2}
+    Data: {fileID: 11400000, guid: 2911ae8da17e01345b0947bb6e57ec14, type: 2}
 --- !u!82 &1130381275
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6086,7 +6086,6 @@ GameObject:
   - component: {fileID: 1362406021}
   - component: {fileID: 1362406025}
   - component: {fileID: 1362406026}
-  - component: {fileID: 1362406027}
   - component: {fileID: 1362406028}
   m_Layer: 0
   m_Name: Cube (1)
@@ -6226,19 +6225,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &1362406027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362406020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79798703937331e380b7f450dc6adee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 9325e22556d39f82b8ca36f1dde938fb, type: 2}
 --- !u!114 &1362406028
 MonoBehaviour:
   m_ObjectHideFlags: 0
