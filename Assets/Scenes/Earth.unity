@@ -38749,7 +38749,7 @@ MonoBehaviour:
   animator: {fileID: 1339230004}
   quest: {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
   dore: {fileID: 65856903}
-  rotationSpeed: 15
+  rotationSpeed: 5
   needRotate: 90
 --- !u!64 &7602902335532739807
 MeshCollider:
