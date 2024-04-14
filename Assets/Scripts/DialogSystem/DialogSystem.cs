@@ -20,11 +20,11 @@ public class DialogSystem : MonoBehaviour
 
     private void TryPlay(int id)
     {
-        if(play != null) StopCoroutine(play);
         foreach (var dialoge in dialoges)
         {
             if (dialoge.Quest.Id == id)
             {
+                if(play != null) StopCoroutine(play);
                 subText.enabled = true;
                 audioSource.enabled = true;
                 

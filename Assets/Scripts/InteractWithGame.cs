@@ -41,6 +41,7 @@ public class InteractWithGame : MonoBehaviour
     public void StopGame()
     {
         playerController.SetMove(true);
+        _miniGame.StopGame();
         _miniGame = null;
     }
 }
