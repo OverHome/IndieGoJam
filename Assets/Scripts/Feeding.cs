@@ -25,7 +25,7 @@ public class Feeding : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         QuestSystem.Instance.NextQuest();
-        yield return new WaitForSeconds(21);
+        yield return new WaitForSeconds(20);
         SceneManager.LoadScene(1);
     }
 }
