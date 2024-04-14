@@ -34,7 +34,7 @@ public class TakeObject : MonoBehaviour
                 hitInfo.transform.parent = objPos;
                 hitInfo.transform.position = objPos.position;
                 hitInfo.transform.rotation = objPos.rotation;
-                if (hitInfo.collider.GetComponent<Prop>().itemId == 1)
+                if (hitInfo.collider.GetComponent<Prop>() != null && hitInfo.collider.GetComponent<Prop>().itemId == 1)
                     hitInfo.transform.localPosition += new Vector3(-2, 0, 0);
                 takedObj = hitInfo.transform.GetComponent<Rigidbody>();
                 hitInfo.transform.GetComponent<TakeTriger>()?.Trigger();
