@@ -1,9 +1,10 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class DoreOpen : MiniGame
 {
     [SerializeField] private GameObject dore;
-    [SerializeField] private float rotationSpeed = 15f;
+    [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float needRotate = 100;
 
     private float _tempRotate;
@@ -15,8 +16,9 @@ public class DoreOpen : MiniGame
 
             if (space)
             {
-                dore.transform.Rotate(rotationSpeed,0,  0);
                 _tempRotate += rotationSpeed;
+                var a = new Vector3(_tempRotate, 0, 0);
+                dore.transform.DOLocalRotate(a, 0.2f);
             }
             if (_tempRotate >= needRotate)
             {
