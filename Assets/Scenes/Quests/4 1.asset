@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c851088e949a4360a6c9bc25acc4f741, type: 3}
-  m_Name: 4
+  m_Name: 4 1
   m_EditorClassIdentifier: 
-  Id: 4
-  Name: "\u0415\u0441\u0442\u044C \u043A\u043E\u043D\u0442\u0430\u043A\u0442!"
-  Descruption: "\u041D\u0430\u0439\u0442\u0438 \u0430\u043D\u0442\u0435\u043D\u0443"
+  Id: 5
+  Name: "\u0412\u0435\u0440\u0430 \u0432 \u043B\u0443\u0447\u0448\u0435\u0435"
+  Descruption: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C \u0430\u043D\u0442\u0435\u043D\u0443
+    \u043D\u0430 \u043C\u0435\u0441\u0442\u043E"

@@ -25,7 +25,12 @@ public class TargetUI : MonoBehaviour {
 		_camera = Camera.main;
         target = Targets[currentTarget];
 	}
-
+    void Start () {
+        QuestSystem.Instance.OnChangeQuest.AddListener(ChangeItem);
+    }
+    void ChangeItem(int id){
+        ChangeTarget();
+    }
 	bool Behind(Vector3 point) // находится ли указанная точка позади нас
 	{
 		bool result = false;
