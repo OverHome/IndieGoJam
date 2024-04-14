@@ -18,13 +18,10 @@ public class SettingsScript : MonoBehaviour
     public UnityEngine.ShadowResolution[] shadowResolutionsArray = {UnityEngine.ShadowResolution.Low,UnityEngine.ShadowResolution.Medium,UnityEngine.ShadowResolution.VeryHigh};
     // TEXT
     private String[] _qualityPreset = {"Низкие","Средние","По ГОСТу"};
-    private String[] _FSRquality = {"Выкл","Качество","Баланс","Производительность"};
-
     // VARIABLES
     private int _currentQuality;
     public TextMeshProUGUI resText;
     public TextMeshProUGUI qualityText;
-    public TextMeshProUGUI FSRText;
     public Slider volumeSlider;
     public Slider senseSlider;
     void Start(){
@@ -35,7 +32,6 @@ public class SettingsScript : MonoBehaviour
         resText.text = Screen.currentResolution.width.ToString() + "X" + Screen.currentResolution.height.ToString();
         qualityText.text = _qualityPreset[2];
         _currentQuality = 2;
-        FSRText.text = _FSRquality[0];
         volumeSlider.value = AudioListener.volume;
         PlayerPrefs.SetFloat("Sense",(float)senseSlider.value);
     }
