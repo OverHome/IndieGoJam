@@ -100,10 +100,10 @@ TextureImporter:
       name: SPACE_btn_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 602
-        width: 621
-        height: 302
+        x: 0
+        y: 1499
+        width: 1550
+        height: 751
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9b50865ae93eed40a3bb6b1fe65eeb2
-      internalID: -1719538254
+      spriteID: 3a370b59c90b59b4fb4303ea7e068978
+      internalID: 2077718727
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: SPACE_btn_1
       rect:
         serializedVersion: 2
-        x: 17
-        y: 303
-        width: 621
-        height: 280
+        x: 0
+        y: 749
+        width: 1550
+        height: 702
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ee80f8756f30f9458df9c30ab131955
-      internalID: 96102242
+      spriteID: 7441cc3c819816942a6ca69709c50e2e
+      internalID: 218567761
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: SPACE_btn_2
       rect:
         serializedVersion: 2
-        x: 17
-        y: 30
-        width: 621
-        height: 253
+        x: 0
+        y: 0
+        width: 1550
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa414b82066fbb949b9c905cb3d9aed6
-      internalID: 848160956
+      spriteID: 5d4d6599b1c98174b92224325ff0889e
+      internalID: 2136113136
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPACE_btn_0: -1719538254
-      SPACE_btn_1: 96102242
-      SPACE_btn_2: 848160956
+      SPACE_btn_0: 2077718727
+      SPACE_btn_1: 218567761
+      SPACE_btn_2: 2136113136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
