@@ -1010,7 +1010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65856903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.8469364, y: 0, z: 0, w: 0.53169423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.067, y: 4.346, z: 1.697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1018,7 +1018,7 @@ Transform:
   - {fileID: 7602902335532739805}
   - {fileID: 2551359543138031132}
   m_Father: {fileID: 2368071879313181455}
-  m_LocalEulerAnglesHint: {x: 115.76, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &117385950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -715198491, guid: 038b5c85c711ed6459deda0216b953f3, type: 3}
+  m_Sprite: {fileID: 285922042, guid: 038b5c85c711ed6459deda0216b953f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5053,6 +5053,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RadioDevice
       objectReference: {fileID: 0}
+    - target: {fileID: 7871892200490592034, guid: 4db3a135a32a3254f84b604c476eb0ce,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1445246582}
     - target: {fileID: 7939915809298864699, guid: 4db3a135a32a3254f84b604c476eb0ce,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10044,7 +10049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1711245163, guid: 60b20d5c0d048ba4ca7bccf3f7051189, type: 3}
+  m_Sprite: {fileID: 1602047962, guid: 60b20d5c0d048ba4ca7bccf3f7051189, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -10704,7 +10709,6 @@ GameObject:
   - component: {fileID: 2067149138}
   - component: {fileID: 2067149137}
   - component: {fileID: 2067149136}
-  - component: {fileID: 2067149135}
   - component: {fileID: 2067149134}
   m_Layer: 0
   m_Name: Gagrin
@@ -10726,20 +10730,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 1.7
---- !u!114 &2067149135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067149133}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42fc67312c4a430f91b91fa42ff40818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
-  pushKey: f
 --- !u!114 &2067149136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11189,7 +11179,7 @@ Transform:
   m_LocalRotation: {x: -0.068190694, y: -0.8036496, z: 0.04998302, w: 0.58906627}
   m_LocalPosition: {x: 0, y: 0.8380841, z: 1.2139071}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8058758252476308995}
   - {fileID: 65856904}
@@ -11340,9 +11330,10 @@ GameObject:
   - component: {fileID: 1049872623775826740}
   - component: {fileID: 5891419644596734761}
   - component: {fileID: 7602902335532739806}
+  - component: {fileID: 7602902335532739807}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: MiniGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11374,11 +11365,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97e9c48b17cd4b0c95722c366842afc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  dore: {fileID: 0}
-  quest: {fileID: 0}
+  animator: {fileID: 1339230004}
+  dore: {fileID: 65856903}
+  quest: {fileID: 11400000, guid: 9f0acc3dcafe067e08a6b26a8a436d82, type: 2}
   rotationSpeed: 15
-  needRotate: 100
+  needRotate: 90
+--- !u!64 &7602902335532739807
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6024469822105087233}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: bc61fbef8e4324a48a502711876e1548, type: 3}
 --- !u!4 &8058758252476308995
 Transform:
   m_ObjectHideFlags: 0

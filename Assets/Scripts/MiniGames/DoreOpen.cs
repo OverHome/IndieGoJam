@@ -16,8 +16,8 @@ public class DoreOpen : MiniGame
 
             if (space)
             {
-                dore.transform.Rotate(0,-rotationSpeed * Time.deltaTime,  0);
-                _tempRotate += rotationSpeed * Time.deltaTime;
+                dore.transform.Rotate(rotationSpeed,0,  0);
+                _tempRotate += rotationSpeed;
             }
             if (_tempRotate >= needRotate)
             {

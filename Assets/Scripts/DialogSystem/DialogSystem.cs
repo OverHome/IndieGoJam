@@ -20,13 +20,14 @@ public class DialogSystem : MonoBehaviour
 
     private void TryPlay(int id)
     {
+        if(play != null) StopCoroutine(play);
         foreach (var dialoge in dialoges)
         {
             if (dialoge.Quest.Id == id)
             {
                 subText.enabled = true;
                 audioSource.enabled = true;
-                if(play != null) StopCoroutine(play);
+                
                 play = StartCoroutine(PlayAnudio(dialoge.Data));
                 break;
             }
