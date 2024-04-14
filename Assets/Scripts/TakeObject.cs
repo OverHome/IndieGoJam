@@ -43,8 +43,9 @@ public class TakeObject : MonoBehaviour
                         if (hitInfo.transform.GetComponent<UseItemTrigger>().Trigger())
                         {
                             _isTaked = false;
-                            takedObj.transform.parent = null;
-                            takedObj.transform.position = hitInfo.transform.position;
+                            takedObj.transform.parent = hitInfo.transform;
+                            takedObj.transform.rotation = new Quaternion(0, 0, 0, 0);
+                            takedObj.transform.localPosition = new Vector3(0, 0 ,0 );
                             takedObj = null;
                         }
                         else
