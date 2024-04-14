@@ -100,10 +100,10 @@ TextureImporter:
       name: D_btn_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 588
-        width: 303
-        height: 302
+        x: 0
+        y: 1498
+        width: 750
+        height: 752
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f900fa4030b766848ad621e73f62567d
-      internalID: 1711245163
+      spriteID: 44907c89c2a0e2d469d0a901cc1fa3a5
+      internalID: 1602047962
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: D_btn_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 288
-        width: 303
-        height: 281
+        x: 0
+        y: 749
+        width: 750
+        height: 702
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed70f51d51a95de48af75f79eaf8d0ec
-      internalID: 1707711933
+      spriteID: a6fc86cb5318b87488b13bf747abe092
+      internalID: 1230243571
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: D_btn_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 16
-        width: 303
-        height: 253
+        x: 0
+        y: 0
+        width: 750
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e208550947f8414c946d032cd0fa87c
-      internalID: 1279922968
+      spriteID: 76915d96e62bf7a45907201363001cbd
+      internalID: -429217854
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      D_btn_0: 1711245163
-      D_btn_1: 1707711933
-      D_btn_2: 1279922968
+      D_btn_0: 1602047962
+      D_btn_1: 1230243571
+      D_btn_2: -429217854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

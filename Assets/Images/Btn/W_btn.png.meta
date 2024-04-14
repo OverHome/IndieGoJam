@@ -100,10 +100,10 @@ TextureImporter:
       name: W_btn_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 588
-        width: 303
-        height: 302
+        x: 0
+        y: 1498
+        width: 750
+        height: 752
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dd727c02979d744a85b4f989dd6aa28
-      internalID: -1481116362
+      spriteID: 2adb91da17feeee4eb788ec5a7616549
+      internalID: -243396665
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: W_btn_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 288
-        width: 303
-        height: 281
+        x: 0
+        y: 749
+        width: 750
+        height: 702
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 753a7021c329fb9439bf880917ec52be
-      internalID: -461450775
+      spriteID: 293cd255e569cb8478fb00287ea3172f
+      internalID: 18421920
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: W_btn_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 16
-        width: 303
-        height: 253
+        x: 0
+        y: 0
+        width: 750
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22e589475ea3a5748a9541c78b90a9a1
-      internalID: 1398279815
+      spriteID: ef9a9cdd522ad7d449f7fc73d332f1ba
+      internalID: -1331733782
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      W_btn_0: -1481116362
-      W_btn_1: -461450775
-      W_btn_2: 1398279815
+      W_btn_0: -243396665
+      W_btn_1: 18421920
+      W_btn_2: -1331733782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
