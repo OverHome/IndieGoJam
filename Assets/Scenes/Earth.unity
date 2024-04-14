@@ -11359,7 +11359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520986075}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfc0a65a17cc13418e330c5702baf50, type: 3}
   m_Name: 
@@ -19455,7 +19455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 10
-  runningSpeed: 10
   sensitivity: 100
   cameraPosition: {fileID: 1416291498}
   canMove: 1
