@@ -25,6 +25,7 @@ public class DialogSystem : MonoBehaviour
             if (dialoge.Quest.Id == id)
             {
                 if(play != null) StopCoroutine(play);
+                subText.transform.parent.gameObject.SetActive(true);
                 subText.enabled = true;
                 audioSource.enabled = true;
                 
@@ -45,5 +46,6 @@ public class DialogSystem : MonoBehaviour
         }
         subText.enabled = false;
         audioSource.enabled = false;
+        subText.transform.parent.gameObject.SetActive(false);
     }
 }

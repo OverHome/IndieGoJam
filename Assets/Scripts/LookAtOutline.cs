@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class LookAtOutline : MonoBehaviour
 {
-    [SerializeField] private Image cursor;
+    [SerializeField] private Image takeImg;
+    [SerializeField] private Image gameImg;
     public float maxDistance = 1f; // Максимальная дистанция, на которой происходит проверка
     private Outline lastOutline; // Последний объект с компонентом Outline
 
@@ -37,13 +38,28 @@ public class LookAtOutline : MonoBehaviour
                     lastOutline = null;
                 }
             }
-           
+
+            if (hit.collider.CompareTag("MiniGame")&& hit.collider.GetComponent<MiniGame>().quest.Id == QuestSystem.Instance.GetQuestId() && !hit.collider.GetComponent<MiniGame>().IsStarted())
+            {
+                gameImg.gameObject.SetActive(true);
+            }
+            else if (hit.collider.CompareTag("Takeable"))
+            {
+                takeImg.gameObject.SetActive(true);
+            }
+            else
+            {
+                gameImg.gameObject.SetActive(false);
+                takeImg.gameObject.SetActive(false);
+            }
         }
         else
         {
           
             if (lastOutline != null)
             {
+                gameImg.gameObject.SetActive(false);
+                takeImg.gameObject.SetActive(false);
                 lastOutline.enabled = false; 
                 // cursor.enabled = false;
                 lastOutline = null;

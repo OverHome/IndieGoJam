@@ -15,7 +15,11 @@ public class MiniGame : MonoBehaviour
         _isGameStart = true;
         animator.gameObject.SetActive(true);
     }
-    
+
+    public bool IsStarted()
+    {
+        return _isGameStart;
+    }
 
     public void StopGame()
     {
