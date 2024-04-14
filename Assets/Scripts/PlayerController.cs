@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float walkingSpeed = 5;
-    [SerializeField] private float sensitivity = 100;
+    private float sensitivity;
     [SerializeField] private Transform cameraPosition;
     
     private float _xRotation = 0f;
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _interactWithGame = GetComponent<InteractWithGame>();
         Cursor.lockState = CursorLockMode.Locked;
+        sensitivity = PlayerPrefs.GetFloat("sense");
     }
 
     private void Update()
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
             _interactWithGame.TryPlayGame();
         }
         
+        sensitivity = PlayerPrefs.GetFloat("Sense") * 2;
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.fixedDeltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.fixedDeltaTime;
 
