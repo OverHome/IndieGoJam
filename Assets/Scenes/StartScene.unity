@@ -1050,6 +1050,7 @@ MonoBehaviour:
   qualityText: {fileID: 154139101}
   FSRText: {fileID: 1188393758}
   volumeSlider: {fileID: 1363905310}
+  senseSlider: {fileID: 1963031689}
 --- !u!1 &315537040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5959,13 +5960,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1214581328}
   m_HandleRect: {fileID: 188235597}
   m_Direction: 0
-  m_MinValue: 20
-  m_MaxValue: 200
+  m_MinValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 271708602}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: changeSense
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2016877896
 GameObject:
   m_ObjectHideFlags: 0

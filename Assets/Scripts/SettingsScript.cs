@@ -26,16 +26,24 @@ public class SettingsScript : MonoBehaviour
     public TextMeshProUGUI qualityText;
     public TextMeshProUGUI FSRText;
     public Slider volumeSlider;
+    public Slider senseSlider;
     void Start(){
+        if(PlayerPrefs.GetFloat("Sense") != (float)50){
+            senseSlider.value = PlayerPrefs.GetFloat("Sense");
+        }
         _resolution = Screen.resolutions;
         resText.text = Screen.currentResolution.width.ToString() + "X" + Screen.currentResolution.height.ToString();
         qualityText.text = _qualityPreset[2];
         _currentQuality = 2;
         FSRText.text = _FSRquality[0];
         volumeSlider.value = AudioListener.volume;
+        PlayerPrefs.SetFloat("Sense",(float)senseSlider.value);
     }
     public void changeVolume(){
         AudioListener.volume = (float) volumeSlider.value;
+    }
+    public void changeSense(){
+        PlayerPrefs.SetFloat("Sense",(float)senseSlider.value);
     }
     public void ChangeValueLeft(int type){
         switch(type){

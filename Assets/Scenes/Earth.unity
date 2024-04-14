@@ -12901,7 +12901,7 @@ Transform:
   m_GameObject: {fileID: 588626816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.027, y: 4.506, z: 0.045}
+  m_LocalPosition: {x: -0.081, y: 4.243, z: -0.092}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12943,7 +12943,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.93660927, b: 0.8443396, a: 1}
   m_Intensity: 1
-  m_Range: 3.31
+  m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -19455,7 +19455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 10
-  sensitivity: 100
   cameraPosition: {fileID: 1416291498}
   canMove: 1
   canMovedCamera: 1
@@ -27627,13 +27626,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1350310659}
   m_HandleRect: {fileID: 31420557}
   m_Direction: 0
-  m_MinValue: 20
-  m_MaxValue: 200
+  m_MinValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1596420003}
+        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+        m_MethodName: changeSense
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1534701451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29172,6 +29183,7 @@ MonoBehaviour:
   qualityText: {fileID: 1572421137}
   FSRText: {fileID: 1232375507}
   volumeSlider: {fileID: 371340806}
+  senseSlider: {fileID: 1531734564}
 --- !u!224 &1596420004
 RectTransform:
   m_ObjectHideFlags: 0
