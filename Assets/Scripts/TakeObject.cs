@@ -75,6 +75,7 @@ public class TakeObject : MonoBehaviour
                     takedObj.GetComponent<Collider>().enabled = true;
                     takedObj.AddForce((Camera.main.transform.forward + playerController.GetForse())*4, ForceMode.Force);
                     takedObj = null;
+                    animator.SetBool("IsTake", false);
                 }
             }
         }
