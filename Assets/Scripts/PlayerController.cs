@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
         _interactWithGame = GetComponent<InteractWithGame>();
         Cursor.lockState = CursorLockMode.Locked;
         sensitivity = PlayerPrefs.GetFloat("sense");
+        if (sensitivity == 0)
+        {
+            sensitivity = 100;
+        }
     }
 
     private void Update()
