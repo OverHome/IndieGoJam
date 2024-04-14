@@ -17,5 +17,3 @@ MonoBehaviour:
       \u043F\u043E\u043B\u0435\u0442! \u0414\u0430\u0451\u0442\u0441\u044F \u0437\u0430\u0436\u0438\u0433\u0430\u043D\u0438\u0435!
       \u0412\u0441\u0435 \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E?"
     Audio: {fileID: 8300000, guid: 9aa8da502bf54f64b84940677fef7183, type: 3}
-  - Sub: "\u041F\u043E\u0435\u0445\u0430\u043B\u0438!"
-    Audio: {fileID: 8300000, guid: 5fc462aa356f3cf4098719a9766f3876, type: 3}
