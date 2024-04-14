@@ -12,6 +12,7 @@ public class QuestSystem: MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private List<Quest> quests;
+    [SerializeField] private AudioSource audioSourse;
     private int _questId;
     private void Awake()
     {
@@ -42,6 +43,7 @@ public class QuestSystem: MonoBehaviour
     public void NextQuest()
     {
         SetQuest(_questId + 1);
+        audioSourse.PlayOneShot(audioSourse.clip);
     }
 
     public int GetQuestId()

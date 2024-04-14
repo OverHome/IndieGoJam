@@ -8,10 +8,13 @@ public class RadioGame: MiniGame
     [SerializeField] private GameObject arrow;
     [SerializeField] private float rotationSpeed = 15f;
     [SerializeField] private float needRotate = 100;
+    [SerializeField] private AudioSource audioSource;
 
     private float _tempRotate;
     private void Update()
     {
+        if (!audioSource.isPlaying && _isGameStart) audioSource.Play();
+        if (audioSource.isPlaying && !_isGameStart) audioSource.Stop();
         if (_isGameStart)
         {
             var a = Input.GetKey(KeyCode.A);
