@@ -4636,6 +4636,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &190525556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4083501151425157549, guid: 58387528f78cd06458b7b87d878e692a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1991433356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &191200459
 GameObject:
   m_ObjectHideFlags: 0
@@ -11353,7 +11359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520986075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfc0a65a17cc13418e330c5702baf50, type: 3}
   m_Name: 
@@ -11361,10 +11367,11 @@ MonoBehaviour:
   Targets:
   - {fileID: 0}
   - {fileID: 1304861264}
-  - {fileID: 1991433357}
+  - {fileID: 190525556}
   - {fileID: 747517243}
   - {fileID: 7602902335532739805}
   - {fileID: 1616956743}
+  - {fileID: 376914893}
   - {fileID: 376914893}
   marker: {fileID: 936639152}
   arrowSprite: {fileID: 21300000, guid: fd2882aca8f69554597fe22b4c41fcbb, type: 3}
@@ -12721,10 +12728,10 @@ RectTransform:
   - {fileID: 860444167}
   - {fileID: 1040682131}
   - {fileID: 18467082}
-  - {fileID: 238202417}
   - {fileID: 1970712780}
   - {fileID: 590728907}
   - {fileID: 520986076}
+  - {fileID: 238202417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

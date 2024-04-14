@@ -8,7 +8,6 @@ using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float walkingSpeed = 5;
-    [SerializeField] private float runningSpeed = 10;
     [SerializeField] private float sensitivity = 100;
     [SerializeField] private Transform cameraPosition;
     
