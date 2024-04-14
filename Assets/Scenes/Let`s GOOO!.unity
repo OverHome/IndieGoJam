@@ -3576,7 +3576,9 @@ MonoBehaviour:
   videoPlayer: {fileID: 721173412}
   cutscenes:
   - Quest: {fileID: 11400000, guid: 1d30b413fce20504ba1d4ee705789512, type: 2}
-    Video: {fileID: 32900000, guid: ebd731481adc27c46a533d12af14ed8e, type: 3}
+    Video: {fileID: 32900000, guid: ff7593547f091ff7bb5fc186cb8e84bd, type: 3}
+  - Quest: {fileID: 11400000, guid: bfe54911430bb0fad931ce02258d416e, type: 2}
+    Video: {fileID: 32900000, guid: ff7593547f091ff7bb5fc186cb8e84bd, type: 3}
 --- !u!328 &721173412
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -7482,6 +7484,7 @@ GameObject:
   - component: {fileID: 1686175039}
   - component: {fileID: 1686175045}
   - component: {fileID: 1686175046}
+  - component: {fileID: 1686175047}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -7603,6 +7606,7 @@ MonoBehaviour:
   nameText: {fileID: 870461459}
   descriptionText: {fileID: 1719195545}
   quests:
+  - {fileID: 11400000, guid: bfe54911430bb0fad931ce02258d416e, type: 2}
   - {fileID: 11400000, guid: 899ec225661b755479ad46fb1f867446, type: 2}
   - {fileID: 11400000, guid: 0842551cc3bede94fa9e297a2023f261, type: 2}
   - {fileID: 11400000, guid: 1d30b413fce20504ba1d4ee705789512, type: 2}
@@ -7722,6 +7726,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 0842551cc3bede94fa9e297a2023f261, type: 2}
+  timing1: 2
+  timing2: 20
+  sceneId: 1
+  load: 1
+--- !u!114 &1686175047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686175038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a1f57a2a100f4365a73718c20c8f314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: bfe54911430bb0fad931ce02258d416e, type: 2}
+  timing1: 18
+  timing2: 0
+  sceneId: 0
+  load: 0
 --- !u!1 &1692784230
 GameObject:
   m_ObjectHideFlags: 0
