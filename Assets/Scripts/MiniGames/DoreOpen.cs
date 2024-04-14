@@ -3,7 +3,6 @@ using UnityEngine;
 public class DoreOpen : MiniGame
 {
     [SerializeField] private GameObject dore;
-    [SerializeField] private Quest quest;
     [SerializeField] private float rotationSpeed = 15f;
     [SerializeField] private float needRotate = 100;
 

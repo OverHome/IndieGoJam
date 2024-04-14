@@ -6,7 +6,6 @@ public class RadioGame: MiniGame
 {
     [SerializeField] private GameObject knob;
     [SerializeField] private GameObject arrow;
-    [SerializeField] private Quest quest;
     [SerializeField] private float rotationSpeed = 15f;
     [SerializeField] private float needRotate = 100;
 

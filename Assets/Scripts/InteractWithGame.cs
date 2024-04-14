@@ -27,6 +27,11 @@ public class InteractWithGame : MonoBehaviour
             if (!hitInfo.transform.gameObject.CompareTag("MiniGame")) return;
 
             _miniGame = hitInfo.transform.GetComponent<MiniGame>();
+            if (_miniGame.quest.Id != QuestSystem.Instance.GetQuestId())
+            {
+                _miniGame = null;
+                return;
+            }
             playerController.SetMove(false);
             _miniGame.StartGame(this);
         }

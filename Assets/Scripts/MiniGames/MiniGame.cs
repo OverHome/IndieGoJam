@@ -4,6 +4,7 @@ using UnityEngine;
 public class MiniGame : MonoBehaviour
 {
     [SerializeField] protected Animator animator;
+    [SerializeField] public Quest quest;
 
     protected bool _isGameStart;
     protected InteractWithGame _interactor;
