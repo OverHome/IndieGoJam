@@ -3576,7 +3576,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 721173412}
   cutscenes:
   - Quest: {fileID: 11400000, guid: 1d30b413fce20504ba1d4ee705789512, type: 2}
-    Video: {fileID: 32900000, guid: ff7593547f091ff7bb5fc186cb8e84bd, type: 3}
+    Video: {fileID: 32900000, guid: ebd731481adc27c46a533d12af14ed8e, type: 3}
 --- !u!328 &721173412
 VideoPlayer:
   m_ObjectHideFlags: 0
