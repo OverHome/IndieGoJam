@@ -11,6 +11,13 @@ public class TakeObject : MonoBehaviour
 
     private Rigidbody takedObj;
     private bool _isTaked;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -33,6 +40,7 @@ public class TakeObject : MonoBehaviour
                 takedObj = hitInfo.transform.GetComponent<Rigidbody>();
                 hitInfo.transform.GetComponent<TakeTriger>()?.Trigger();
                 _isTaked = true;
+                animator.SetBool("IsTake", true);
             }
             else
             {
@@ -47,6 +55,7 @@ public class TakeObject : MonoBehaviour
                             takedObj.transform.rotation = new Quaternion(0, 0, 0, 0);
                             takedObj.transform.localPosition = new Vector3(0, 0 ,0 );
                             takedObj = null;
+                            animator.SetBool("IsTake", false);
                         }
                         else
                         {
