@@ -39,7 +39,7 @@ public class LookAtOutline : MonoBehaviour
                 }
             }
 
-            if (hit.collider.CompareTag("MiniGame")&& hit.collider.GetComponent<MiniGame>().quest.Id == QuestSystem.Instance.GetQuestId() && !hit.collider.GetComponent<MiniGame>().IsStarted())
+            if (hit.collider.CompareTag("MiniGame")&& hit.collider.GetComponent<MiniGame>().quest.Id == QuestSystem.Instance.GetQuestId() && !hit.collider.GetComponent<MiniGame>().animator.gameObject.activeSelf)
             {
                 gameImg.gameObject.SetActive(true);
             }
