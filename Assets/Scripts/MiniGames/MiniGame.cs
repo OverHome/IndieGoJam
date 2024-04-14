@@ -12,6 +12,7 @@ public class MiniGame : MonoBehaviour
     {
         _interactor = interactor;
         _isGameStart = true;
+        animator.gameObject.SetActive(true);
     }
     
 
@@ -19,6 +20,7 @@ public class MiniGame : MonoBehaviour
     {
         _isGameStart = false;
         _interactor.StopGame();
+        animator.gameObject.SetActive(false);
     }
   
 }

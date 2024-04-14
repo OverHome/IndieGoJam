@@ -12,10 +12,9 @@ public class DoreOpen : MiniGame
     {
         if (_isGameStart)
         {
-            var w = Input.GetKey(KeyCode.W);
             var space = Input.GetKeyDown(KeyCode.Space);
 
-            if (w && space)
+            if (space)
             {
                 dore.transform.Rotate(0,-rotationSpeed * Time.deltaTime,  0);
                 _tempRotate += rotationSpeed * Time.deltaTime;

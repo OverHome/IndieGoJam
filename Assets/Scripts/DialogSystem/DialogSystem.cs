@@ -10,7 +10,8 @@ public class DialogSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI subText;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private List<Dialoge> dialoges;
-    
+
+    private Coroutine play;
     private void Start()
     {
         QuestSystem.Instance.OnChangeQuest.AddListener(TryPlay);
@@ -25,7 +26,8 @@ public class DialogSystem : MonoBehaviour
             {
                 subText.enabled = true;
                 audioSource.enabled = true;
-                StartCoroutine(PlayAnudio(dialoge.Data));
+                if(play != null) StopCoroutine(play);
+                play = StartCoroutine(PlayAnudio(dialoge.Data));
                 break;
             }
         }
